@@ -1,3 +1,4 @@
 # CHRIntra
 CHReynolds Intra system
-This project is just a concept idea right now until further order it will not be worked on.
+Project is slowly being developed. 
+There is no priority for it but it is being worked on.
