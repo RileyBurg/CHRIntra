@@ -14,7 +14,7 @@ if(isset($_POST) & !empty($_POST))
 	
         if ($count == 1) 
 	{
-	       header("Location: http://chrap.chreynolds.com/userMenu.php");
+	       header("Location: secretProfile.php");
                session_start();
 	}
 	else
@@ -35,11 +35,10 @@ if(isset($_POST) & !empty($_POST))
 
 </head>
 
-<body>
-
-<div id="rectangle" class="shadow">
+<body id="login">
+<div id="rectangle" class="darkBox">
 	<h1 class ="loginHead">I N T R A</h1>
-			<form action = "login.php" method="POST">
+			<form action = "secretlogin.php" method="POST">
 				<input type="username" placeholder="Enter your user number" name ="username">
 				<input type="password" placeholder="Enter your password" name ="password">
 				<input class="subLogin" type="submit">
