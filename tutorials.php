@@ -21,6 +21,15 @@ $usrnme = $_SESSION["username"];
 </head>
 
 <body>
-	
+	<body id="tutorials">  
+    <div id="rectangle" class="headBox">
+        
+        <div class="searchBox">
+            <input type="search" id="search" placeholder="Search..." />    
+        </div>
+       
+        <h1 id="tuttitle">Video Tutorials</h1>
+        
+    </div>
 </body>
 </html>

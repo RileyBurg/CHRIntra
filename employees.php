@@ -20,7 +20,15 @@ $usrnme = $_SESSION["username"];
         <li><a href="secretlogout.php">Logout</a></li>
     </ul>
 </head>
-<body>
-
+<body id="employees">
+    <div id="rectangle" class="headBox">
+        
+        <div class="searchBox">
+            <input type="search" id="search" placeholder="Search..." />    
+        </div>
+       
+        <h1 id="empDirectory">Employee Directory</h1>
+        
+    </div>
 </body>
 </html>

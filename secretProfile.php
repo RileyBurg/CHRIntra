@@ -13,11 +13,12 @@ while($empRow = mysqli_fetch_array($empResult))
 }
 $empString = json_encode($empArray);
 
+
 //PROFILE PICTURE
 $profPic = "SELECT profpic FROM logins WHERE usrnme = '$usrnme'";
 $profResult=mysqli_query($connection, $profPic);
 $picArray = array();
-while($picRow = mysqli_fetch_array($picResult))
+while($picRow = mysqli_fetch_array($profResult))
 {
     $picArray[]= array($picRow['profpic']);
 }
@@ -33,6 +34,7 @@ while($jobRow = mysqli_fetch_array($jobResult))
     $jobArray[]= array($jobRow['jobtitle']);
 }
 $jobString = json_encode($jobArray);
+
 
 //Phone Number
 $phoneNum = "SELECT phonenum FROM logins WHERE usrnme = '$usrnme'";
@@ -89,7 +91,7 @@ $phoneString = json_encode($phoneArray);
     </div>
     <div id="openModal" class="modalDialog">
         <a href="#close" title="Close" class="close">X</a>
-        <h2 style="margin-left: 20px;">Uploading a photo</h2>
+        <h2 style="margin-left: 20px">Uploading a photo</h2>
         <div class="insideModal">
             <p>Choose an image for upload.</p>
             <form action="upload.php" method="post">
@@ -99,7 +101,7 @@ $phoneString = json_encode($phoneArray);
     </div>
 <script type="text/javascript">
     empVarList = <?= $empString ?>;
-    picVarList = <?= $picString ?>;
+   //picVarList = <?= $picString ?>;
     jobVarList = <?= $jobString ?>;
     phoneVarList = <?= $phoneString ?>;
 
@@ -109,12 +111,12 @@ $phoneString = json_encode($phoneArray);
     let phone = [];
 
     emps = empVarList;
-    pic = picVarList;
+    //pic = picVarList;
     job = jobVarList;
     phone = phoneVarList;
 
     var userName = document.getElementById('user');
-    var profPic = document.getElementById('picture');
+    //var profPic = document.getElementById('picture');
     var jobTitle = document.getElementById('jobTitle');
     var phoneNum = document.getElementById('phoneNum');
 
